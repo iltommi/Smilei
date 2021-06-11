@@ -6,8 +6,8 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
+    - run: sudo apt install git
     - uses: actions/checkout@v1
     - uses: ammaraskar/sphinx-action@master
       with:
-        pre-build-command: sudo apt install git
         docs-folder: "doc/Sphinx/"
