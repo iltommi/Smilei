@@ -6,6 +6,7 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
+    - run: ls -la
     - run: pip install Sphinx
     - run: mkdir -p build/html/_downloads
     - run: git rev-parse --short HEAD > scripts/compile_tools/version
