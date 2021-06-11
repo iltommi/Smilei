@@ -8,6 +8,8 @@ jobs:
     steps:
     - run: ls -la ..
     - run: pip install Sphinx
+    - run: cd ../Smilei
+    - run: ls -la 
     - run: mkdir -p build/html/_downloads
     - run: git rev-parse --short HEAD > scripts/compile_tools/version
     - run: git archive --format tar -o build/html/_downloads/Smilei.tar HEAD
